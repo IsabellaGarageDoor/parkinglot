@@ -43,10 +43,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+
+<!-- REMOVE NO ROBOTS AND SITE UNDER CONSTRUCTION BANNER BELOW WHEN READY TO LAUNCH -->
+<meta name="robots" content="noindex, nofollow"> 
   </head>
   <body class="min-h-screen bg-white">
     <Header />
     <main>
+<div style="margin-top: 5rem; padding: 12px 20px; background: #fff3cd; border: 1px solid #ffe69c; color: #664d03; text-align: center; font-size: 14px; line-height: 1.5;">
+  <strong>Notice:</strong> This website is currently under development and is provided for preview purposes only. Content may contain placeholder information, errors, or incomplete details. No representation or warranty is made regarding the accuracy, completeness, or reliability of information displayed on this site. This preview is not intended as an offer, advertisement, or solicitation for services.
+</div>
       <slot />
     </main>
     <Footer />

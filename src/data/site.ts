@@ -9,7 +9,7 @@ export const site = {
   hours: 'Mon–Sat, 7am – 6pm',
   homeBase: 'Rosebush, MI',
   serviceArea: 'Central Michigan — within ~45 minutes of Rosebush',
-  license: 'MI Lic #SC-PML-04217', 
+  license: 'MI Lic #coming soon', 
   nav: [
     { label: 'Services', href: '/services' },
     { label: 'Service Areas', href: '/locations' },
