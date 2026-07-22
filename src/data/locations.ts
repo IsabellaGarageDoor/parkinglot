@@ -19,7 +19,7 @@ export const locations: Location[] = [
     blurb:
       'Mt. Pleasant is the biggest commercial hub in Isabella County — and the parking lots here see real traffic, from downtown retail to the CMU campus and the Soaring Eagle complex. We stripe, patch, and sign lots across Mt. Pleasant and the surrounding townships, with crews dispatched from Rosebush and free estimates within 48 hours.',
     hero: 'https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    img: '/src/photos/mt-pleasant-michigan.avif',
+    img: '/photos/mt-pleasant-michigan.avif',
     distanceFromRosebush: '15 min from Rosebush',
     nearbyLandmarks: ['Downtown Mt. Pleasant', 'Central Michigan University', 'Soaring Eagle Casino'],
     metaTitle: 'Parking Lot Striping in Mt. Pleasant, MI | Schwab & Co. Holdings',
@@ -32,7 +32,7 @@ export const locations: Location[] = [
     blurb:
       'Clare sits right on US-127 and the county line — a natural stop for travelers heading north. Retail lots, gas stations, and restaurants along the corridor see steady traffic and need regular re-striping and pothole patching. We serve Clare and the surrounding lakes-area communities with full parking lot maintenance.',
     hero: 'https://images.pexels.com/photos/3027628/pexels-photo-3027628.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    img: '/src/photos/clare-michigan.avif',
+    img: '/photos/clare-michigan.avif',
     distanceFromRosebush: '20 min from Rosebush',
     nearbyLandmarks: ['US-127 corridor', 'Downtown Clare', 'Clare County lakes region'],
     metaTitle: 'Parking Lot Striping in Clare, MI | Schwab & Co. Holdings',
@@ -44,8 +44,8 @@ export const locations: Location[] = [
     county: 'Gratiot County',
     blurb:
       'Alma is the home of Alma College and a solid manufacturing base — both of which mean parking lots that take a beating. We handle re-striping, pothole patching, wheel stop replacement, and ADA compliance work for commercial, institutional, and industrial lots across Alma and Gratiot County.',
-    hero: '/src/photos/alma-michigan.avif',
-    img: '/src/photos/alma-michigan.avif',
+    hero: '/photos/alma-michigan.avif',
+    img: '/photos/alma-michigan.avif',
     distanceFromRosebush: '25 min from Rosebush',
     nearbyLandmarks: ['Alma College', 'Downtown Alma', 'Gratiot industrial corridor'],
     metaTitle: 'Parking Lot Striping in Alma, MI | Schwab & Co. Holdings',
@@ -58,7 +58,7 @@ export const locations: Location[] = [
     blurb:
       'Midland is the largest city we serve — a corporate and medical hub with big-box retail, the Dow campus, and MidMichigan Medical Center. Larger lots here need a crew that can handle full re-striping, multi-phase ADA upgrades, and scheduled maintenance contracts. We dispatch from Rosebush and serve all of Midland County.',
     hero: 'https://images.pexels.com/photos/417072/pexels-photo-417072.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    img: '/src/photos/midland-michigan.avif',
+    img: '/photos/midland-michigan.avif',
     distanceFromRosebush: '40 min from Rosebush',
     nearbyLandmarks: ['Downtown Midland', 'Dow corporate campus', 'MidMichigan Medical Center'],
     metaTitle: 'Parking Lot Striping in Midland, MI | Schwab & Co. Holdings',
