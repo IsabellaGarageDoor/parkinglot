@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import CTASection from '../components/CTASection.astro';
+import Icon from '../components/Icon.astro';
+import { stats } from '../data/site';
+---
+
+<BaseLayout
+  title="About Schwab & Co. Holdings | Central Michigan Parking Lot Maintenance"
+  description="Schwab & Co. Holdings is a Rosebush, MI-based parking lot maintenance company. We focus on striping, patching, signs, and ADA work — and we don't pretend to be a paving crew."
+>
+  <Hero
+    eyebrow="About us"
+    title="Central Michigan's"
+    highlight=" parking lot crew."
+    subtitle="We focus on what we do best — striping, patching, signs, and ADA work — and we don't pretend to be a paving crew. Honest work, fair quotes, lines that last."
+    image="https://images.pexels.com/photos/5821848/pexels-photo-5821848.jpeg?auto=compress&cs=tinysrgb&w=1600"
+  />
+
+  <section class="bg-white py-20 sm:py-28">
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:items-center">
+      <div class="relative">
+        <div class="overflow-hidden rounded-3xl shadow-2xl shadow-ink-900/10">
+          <img src="https://images.pexels.com/photos/823696/pexels-photo-823696.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Crew striping a parking lot" class="h-full w-full object-cover" loading="lazy" />
+        </div>
+        <div class="absolute -bottom-6 -right-2 hidden rounded-2xl bg-brand-400 px-6 py-5 text-ink-900 shadow-xl sm:block">
+          <p class="font-display text-3xl font-extrabold">Rosebush</p>
+          <p class="text-sm font-semibold">home base</p>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Our story</span>
+        <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+          A focused crew, not a jack-of-all-trades.
+        </h2>
+        <p class="mt-5 text-lg leading-relaxed text-ink-700/80">
+          Schwab &amp; Co. Holdings was started with one idea: do parking lot maintenance right,
+          and only do parking lot maintenance. We don't pave, we don't sealcoat, and we don't take
+          on work we can't deliver to a high standard. What we do is stripe, patch, sign, and bring
+          lots up to ADA code — and we do it well enough that you'll call us back next time.
+        </p>
+        <p class="mt-4 text-lg leading-relaxed text-ink-700/80">
+          Based in Rosebush, we dispatch across central Michigan — from Midland to Houghton Lake,
+          Clare to Alma. Every job starts with a free site walk, a written layout, and a quote with
+          no surprise add-ons. We show up on the day we promised.
+        </p>
+        <ul class="mt-7 grid gap-4 sm:grid-cols-2">
+          {[
+            { icon: 'shield', t: 'Fully licensed & insured' },
+            { icon: 'clock', t: 'On-time, every time' },
+            { icon: 'check-circle', t: 'Written MUTCD layouts' },
+            { icon: 'star', t: '5-star average rating' },
+          ].map((f) => (
+            <li class="flex items-center gap-3">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-100 text-brand-600">
+                <Icon name={f.icon} class="h-5 w-5" />
+              </span>
+              <span class="font-semibold text-ink-900">{f.t}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-ink-900 py-14">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <dl class="grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-4">
+        {stats.map((s) => (
+          <div class="text-center">
+            <dt class="font-display text-4xl font-extrabold text-brand-400">{s.value}</dt>
+            <dd class="mt-2 text-sm text-white/60">{s.label}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="bg-white py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <span class="eyebrow">How we work</span>
+        <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+          Three things we won't compromise on.
+        </h2>
+      </div>
+      <div class="mt-14 grid gap-6 md:grid-cols-3">
+        {[
+          { icon: 'ruler', title: 'MUTCD & ADA layouts', desc: 'Every layout meets federal MUTCD spec and current ADA Standards. We document the work so you have a paper trail.' },
+          { icon: 'truck', title: 'We show up', desc: 'On the day we promised, with the crew and materials we quoted. No bait-and-switch, no surprise add-ons.' },
+          { icon: 'shield', title: 'Work you can stand behind', desc: 'We don\'t leave until you\'d put your name on the work. If a line isn\'t right, we fix it on the spot.' },
+        ].map((v) => (
+          <article class="card text-center">
+            <span class="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-brand-600">
+              <Icon name={v.icon} class="h-6 w-6" strokeWidth={2.2} />
+            </span>
+            <h3 class="mt-5 font-display text-xl font-bold text-ink-900">{v.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-700/80">{v.desc}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Want to work with a crew that does one thing well?"
+    desc="We'd rather turn down a job than do it badly. If it's in our wheelhouse, you'll get the cleanest quote in central Michigan."
+  />
+</BaseLayout>

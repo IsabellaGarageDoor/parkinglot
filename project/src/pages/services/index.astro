@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CTASection from '../../components/CTASection.astro';
+import { services } from '../../data/services';
+---
+
+<BaseLayout
+  title="Parking Lot Services in Central Michigan | Schwab & Co. Holdings"
+  description="Line striping, pothole repair, wheel stops, signs, ADA compliance, small concrete repair, and speed bumps across central Michigan. Free estimates within 48 hours."
+>
+  <Hero
+    eyebrow="Our services"
+    title="Parking lot work,"
+    highlight=" done right."
+    subtitle="Everything parking lot — minus sealcoating and paving. We focus on what we do best so you get work that lasts."
+    image="https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg?auto=compress&cs=tinysrgb&w=1600"
+  />
+
+  <section class="bg-white py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <SectionHeading
+        eyebrow="What we do"
+        title={<>Full-service parking lot <span class="text-brand-500">maintenance</span></>}
+        desc="Every service is engineered for durability, safety, and curb appeal. Click any service for process, FAQs, and a free quote."
+      />
+      <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((s) => <ServiceCard service={s} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-ink-900 py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <SectionHeading
+        dark
+        eyebrow="How it works"
+        title={<>From first call to <span class="text-brand-400">final walk-through</span></>}
+      />
+      <div class="mt-14 grid gap-6 md:grid-cols-4">
+        {[
+          { step: '01', title: 'Free site walk', desc: 'We come out, measure the lot, and photograph any issues — no charge.' },
+          { step: '02', title: 'Written quote', desc: 'You get a fixed-price quote with a layout sketch and a clear scope of work.' },
+          { step: '03', title: 'Scheduled work', desc: 'We schedule around your hours — nights and weekends if your lot needs to stay open.' },
+          { step: '04', title: 'Final walk-through', desc: 'You sign off before we pack up. If it isn\'t right, we fix it on the spot.' },
+        ].map((p) => (
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <span class="font-display text-3xl font-extrabold text-brand-400">{p.step}</span>
+            <h3 class="mt-3 font-display text-lg font-bold text-white">{p.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>

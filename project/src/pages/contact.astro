@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Contact Schwab & Co. Holdings | Free Parking Lot Estimates in Central Michigan"
+  description="Request a free parking lot maintenance estimate in central Michigan. Line striping, pothole repair, signs, ADA compliance, and small concrete work. Response within 48 hours."
+>
+  <section class="relative isolate overflow-hidden bg-ink-900 pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_20%_100%,rgba(255,176,31,0.15),transparent)]"></div>
+    <div class="lane-line absolute inset-x-0 bottom-0 opacity-50"></div>
+
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:items-start">
+      <div>
+        <span class="eyebrow-dark">Get in touch</span>
+        <h1 class="mt-4 font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+          Request your <span class="text-brand-400">free estimate</span>
+        </h1>
+        <p class="mt-4 max-w-md text-lg leading-relaxed text-white/70">
+          Tell us about your lot and we'll send a written quote within 48 hours — no obligation,
+          no surprise add-ons.
+        </p>
+
+        <div class="mt-8 space-y-4">
+          <a href={site.phoneHref} class="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 transition hover:border-brand-400/40 hover:bg-white/10">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-brand-400 text-ink-900"><Icon name="phone" class="h-5 w-5" /></span>
+            <div>
+              <p class="text-sm text-white/60">Call us</p>
+              <p class="font-display text-lg font-bold text-white">{site.phone}</p>
+            </div>
+          </a>
+          <a href={site.emailHref} class="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 transition hover:border-brand-400/40 hover:bg-white/10">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-brand-400 text-ink-900"><Icon name="mail" class="h-5 w-5" /></span>
+            <div>
+              <p class="text-sm text-white/60">Email us</p>
+              <p class="font-display text-lg font-bold text-white">{site.email}</p>
+            </div>
+          </a>
+          <div class="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-brand-400 text-ink-900"><Icon name="clock" class="h-5 w-5" /></span>
+            <div>
+              <p class="text-sm text-white/60">Office hours</p>
+              <p class="font-display text-lg font-bold text-white">{site.hours}</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-brand-400 text-ink-900"><Icon name="map-pin" class="h-5 w-5" /></span>
+            <div>
+              <p class="text-sm text-white/60">Home base</p>
+              <p class="font-display text-lg font-bold text-white">{site.homeBase} · {site.serviceArea}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ContactForm />
+    </div>
+  </section>
+</BaseLayout>

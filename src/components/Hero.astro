@@ -1,0 +1,98 @@
+---
+import Icon from './Icon.astro';
+import { site, stats } from '../data/site';
+
+export interface Props {
+  eyebrow?: string;
+  title: string;
+  highlight?: string;
+  subtitle?: string;
+  image?: string;
+}
+
+const {
+  eyebrow = 'Free estimates within 48 hours',
+  title,
+  highlight,
+  subtitle = 'Crisp lines, fixed potholes, and code-compliant lots — work you\'ll be proud to show off. Dispatched from Rosebush, serving all of Central Michigan.',
+  image = '/src/photos/freshly-striped-parking-lot-mount-pleasant-michigan.avif',
+} = Astro.props;
+---
+
+<section class="relative isolate overflow-hidden bg-ink-900 pt-28 pb-20 sm:pt-36 sm:pb-28">
+  <div class="absolute inset-0 -z-10">
+    <img src={image} alt="Freshly striped parking lot" class="h-full w-full object-cover opacity-30" loading="eager" />
+    <div class="absolute inset-0 bg-gradient-to-br from-ink-900 via-ink-900/85 to-ink-900/40"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(60%_60%_at_20%_10%,rgba(255,176,31,0.18),transparent)]"></div>
+  </div>
+
+  <div class="lane-line absolute inset-x-0 bottom-0 opacity-50"></div>
+
+  <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:items-center">
+    <div class="lg:col-span-7">
+      <span class="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-300 animate-fade-up">
+        <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+        {eyebrow}
+      </span>
+      <h1 class="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl animate-fade-up">
+        {title}
+        {highlight && <span class="text-brand-400">{highlight}</span>}
+      </h1>
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/75 animate-fade-up">{subtitle}</p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-4 animate-fade-up">
+        <a href="/contact" class="group btn-primary">
+          Get a free quote
+          <Icon name="arrow-right" class="h-4 w-4 transition group-hover:translate-x-1" />
+        </a>
+        <a href="/services" class="btn-ghost">Explore services</a>
+      </div>
+
+      <dl class="mt-12 grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-4">
+        {stats.map((s) => (
+          <div>
+            <dt class="font-display text-3xl font-extrabold text-white">{s.value}</dt>
+            <dd class="mt-1 text-sm text-white/60">{s.label}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="relative animate-fade-up rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-2xl shadow-black/40">
+        <div class="stall-pattern absolute inset-x-0 top-0 h-16 rounded-t-3xl opacity-40"></div>
+
+        <div class="relative flex items-center gap-3">
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-400 text-ink-900">
+            <Icon name="phone" class="h-5 w-5" />
+          </span>
+          <div>
+            <p class="text-sm text-white/60">Call us directly</p>
+            <a href={site.phoneHref} class="font-display text-xl font-bold text-white hover:text-brand-400">{site.phone}</a>
+          </div>
+        </div>
+
+        <div class="my-6 h-px bg-white/10"></div>
+
+        <ul class="relative space-y-3 text-sm text-white/80">
+          {[
+            'Licensed & insured in Michigan',
+            'MUTCD & ADA compliant layouts',
+            'Night & weekend scheduling available',
+            'Satisfaction-guaranteed re-stripe',
+          ].map((t) => (
+            <li class="flex items-start gap-3">
+              <Icon name="check-circle" class="mt-0.5 h-5 w-5 flex-none text-brand-400" />
+              <span>{t}</span>
+            </li>
+          ))}
+        </ul>
+
+        <a href="/contact" class="relative mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-ink-900 transition hover:bg-brand-100">
+          Request a callback
+          <Icon name="chevron" class="h-4 w-4" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

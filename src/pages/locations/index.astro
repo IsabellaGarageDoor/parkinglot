@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import LocationCard from '../../components/LocationCard.astro';
+import CTASection from '../../components/CTASection.astro';
+import Icon from '../../components/Icon.astro';
+import { locations } from '../../data/locations';
+import { services } from '../../data/services';
+---
+
+<BaseLayout
+  title="Service Areas | Central Michigan Parking Lot Maintenance | Schwab & Co. Holdings"
+  description="Schwab & Co. Holdings serves central Michigan — Mt. Pleasant, Clare, Alma, Midland, Houghton Lake, Rosebush, Shepherd, St. Louis, and surrounding areas. Free estimates within 48 hours."
+>
+  <Hero
+    eyebrow="Service areas"
+    title="Central Michigan,"
+    highlight=" covered."
+    subtitle="Crews dispatched daily from Rosebush. If your town is within about 45 minutes of us, we'll be there — and we travel for larger contracts."
+    image="https://images.pexels.com/photos/3027628/pexels-photo-3027628.jpeg?auto=compress&cs=tinysrgb&w=1600"
+  />
+
+  <section class="bg-white py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <SectionHeading
+        eyebrow="Where we work"
+        title={<>Towns we <span class="text-brand-500">serve</span></>}
+        desc="Click any town for the services we offer there, local landmarks, and a free estimate form."
+      />
+      <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {locations.map((l) => <LocationCard location={l} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-ink-900 py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+        <div>
+          <span class="eyebrow-dark">Our reach</span>
+          <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            Based in Rosebush. On the road across the region.
+          </h2>
+          <p class="mt-4 text-lg leading-relaxed text-white/70">
+            Rosebush is our home base — a small Isabella County community just north of Mt. Pleasant.
+            From here we reach most of central Michigan in under an hour, which keeps our response
+            times fast and our travel costs low.
+          </p>
+          <ul class="mt-6 space-y-3 text-white/80">
+            <li class="flex items-center gap-3"><Icon name="check-circle" class="h-5 w-5 text-brand-400" /> Free estimates within 48 hours</li>
+            <li class="flex items-center gap-3"><Icon name="check-circle" class="h-5 w-5 text-brand-400" /> Same-week scheduling for most jobs</li>
+            <li class="flex items-center gap-3"><Icon name="check-circle" class="h-5 w-5 text-brand-400" /> We travel for larger contracts — just ask</li>
+          </ul>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {services.slice(0, 4).map((s) => (
+            <a href={`/services/${s.slug}`} class="group flex items-center justify-between rounded-xl border border-white/10 bg-white/5 p-4 transition hover:border-brand-400/40 hover:bg-white/10">
+              <div>
+                <p class="font-display font-bold text-white">{s.title}</p>
+                <p class="text-xs text-white/50">Available region-wide</p>
+              </div>
+              <Icon name="arrow-right" class="h-4 w-4 text-brand-400 transition group-hover:translate-x-1" />
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>

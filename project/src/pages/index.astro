@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import TrustBar from '../components/TrustBar.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import LocationCard from '../components/LocationCard.astro';
+import CTASection from '../components/CTASection.astro';
+import Icon from '../components/Icon.astro';
+import { services } from '../data/services';
+import { locations } from '../data/locations';
+import { reviews } from '../data/site';
+
+const featuredServices = services.slice(0, 6);
+const featuredLocations = locations.slice(0, 4);
+---
+
+<BaseLayout
+  title="Central Michigan Parking Lot Maintenance | Schwab & Co. Holdings"
+  description="Line striping, pothole repair, wheel stops, signs, ADA compliance, and small concrete work across central Michigan. Free estimates within 48 hours. Dispatched from Rosebush, MI."
+>
+  <Hero
+    eyebrow="Free estimates within 48 hours"
+    title="Parking lot maintenance that"
+    highlight=" commands attention."
+  />
+
+  <TrustBar />
+
+  <section id="services" class="bg-white py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <SectionHeading
+        eyebrow="What we do"
+        title={<>Full-service parking lot <span class="text-brand-500">maintenance</span></>}
+        desc="From the first line to the last sign — every service is engineered for durability, safety, and curb appeal. No sealcoating, no paving — we stick to what we do best."
+      />
+      <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {featuredServices.map((s) => <ServiceCard service={s} />)}
+      </div>
+      <div class="mt-10 text-center">
+        <a href="/services" class="inline-flex items-center gap-2 text-sm font-bold text-brand-600 hover:gap-3">
+          See all services
+          <Icon name="arrow-right" class="h-4 w-4" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="locations" class="relative overflow-hidden bg-ink-900 py-20 sm:py-28">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_80%_0%,rgba(255,176,31,0.12),transparent)]"></div>
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <SectionHeading
+        dark
+        eyebrow="Service area"
+        title={<>On the job across <span class="text-brand-400">central Michigan</span></>}
+        desc="Crews dispatched daily from Rosebush. Don't see your town? Call us — we travel for larger contracts."
+      />
+      <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {featuredLocations.map((l) => <LocationCard location={l} />)}
+      </div>
+      <div class="mt-10 text-center">
+        <a href="/locations" class="inline-flex items-center gap-2 text-sm font-bold text-brand-400 hover:gap-3">
+          See all service areas
+          <Icon name="arrow-right" class="h-4 w-4" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="bg-white py-20 sm:py-28">
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:items-center">
+      <div class="relative">
+        <div class="overflow-hidden rounded-3xl shadow-2xl shadow-ink-900/10">
+          <img src="https://images.pexels.com/photos/823696/pexels-photo-823696.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Crew striping a parking lot" class="h-full w-full object-cover" loading="lazy" />
+        </div>
+        <div class="absolute -bottom-6 -right-2 hidden rounded-2xl bg-brand-400 px-6 py-5 text-ink-900 shadow-xl sm:block">
+          <p class="font-display text-3xl font-extrabold">Central MI</p>
+          <p class="text-sm font-semibold">parking lot specialists</p>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">About Schwab &amp; Co.</span>
+        <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+          A crew that treats your lot like it's our own.
+        </h2>
+        <p class="mt-5 text-lg leading-relaxed text-ink-700/80">
+          Schwab &amp; Co. Holdings is a central Michigan parking lot maintenance company based in
+          Rosebush. We focus on what we do best — striping, patching, signs, and ADA work — and
+          we don't pretend to be a paving crew. Every job starts with a free site walk, a written
+          layout that meets MUTCD and ADA, and a quote with no surprise add-ons.
+        </p>
+        <p class="mt-4 text-lg leading-relaxed text-ink-700/80">
+          We show up on the day we promised, and we don't leave until you'd put your name on the
+          work.
+        </p>
+        <ul class="mt-7 grid gap-4 sm:grid-cols-2">
+          {[
+            { icon: 'shield', t: 'Fully licensed & insured' },
+            { icon: 'clock', t: 'On-time, every time' },
+            { icon: 'check-circle', t: 'Written MUTCD layouts' },
+            { icon: 'star', t: '5-star average rating' },
+          ].map((f) => (
+            <li class="flex items-center gap-3">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-100 text-brand-600">
+                <Icon name={f.icon} class="h-5 w-5" />
+              </span>
+              <span class="font-semibold text-ink-900">{f.t}</span>
+            </li>
+          ))}
+        </ul>
+        <a href="/about" class="mt-8 inline-flex items-center gap-2 text-sm font-bold text-brand-600 hover:gap-3">
+          Read our story
+          <Icon name="arrow-right" class="h-4 w-4" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-20 sm:py-28" style="background-color: #f8fafc;">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <SectionHeading
+        eyebrow="Client reviews"
+        title={<>What property managers <span class="text-brand-500">say about us</span></>}
+      />
+      <div class="mt-14 grid gap-6 lg:grid-cols-3">
+        {reviews.map((r) => (
+          <figure class="flex h-full flex-col rounded-2xl border border-ink-700/10 bg-white p-7 shadow-sm">
+            <Icon name="quote" class="h-8 w-8 text-brand-400" />
+            <div class="mt-4 flex gap-1">
+              {Array.from({ length: r.rating }).map(() => (
+                <Icon name="star" class="h-4 w-4 fill-brand-400 text-brand-400" />
+              ))}
+            </div>
+            <blockquote class="mt-4 flex-1 text-base leading-relaxed text-ink-700">"{r.text}"</blockquote>
+            <figcaption class="mt-6 border-t border-ink-700/10 pt-4">
+              <p class="font-display font-bold text-ink-900">{r.name}</p>
+              <p class="text-sm text-ink-700/70">{r.role}</p>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>
