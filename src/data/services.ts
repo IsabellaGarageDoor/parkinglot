@@ -16,6 +16,73 @@ export type Service = {
 
 export const services: Service[] = [
   {
+    slug: 'seal-coating',
+    title: 'Seal Coating',
+    short: 'Protective sealcoat application that shields asphalt from Michigan freeze-thaw, UV, and oil damage — and gets your lot ready to re-stripe.',
+    tagline: 'The coat that buys your asphalt another decade.',
+    description:
+      'Unsealed asphalt oxidizes, cracks, and breaks down fast under Michigan\'s freeze-thaw cycles, road salt, and summer UV. We apply a premium sealcoat that fills surface pores, blocks water and oil intrusion, and restores that deep black finish — a fraction of the cost of an overlay or repave. We clean and prep the lot, spot-prime oil stains so the sealer bonds, and apply two coats by squeegee or spray depending on the surface. Most lots are ready to re-stripe within a day or two of the final coat.',
+    icon: 'droplet',
+    hero: 'https://images.pexels.com/photos/5821848/pexels-photo-5821848.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    gallery: [
+      'https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg?auto=compress&cs=tinysrgb&w=900',
+      'https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=900',
+    ],
+    bullets: [
+      'Blocks water, oil, and UV damage that breaks down asphalt',
+      'Oil-stain spot priming so the sealer actually bonds',
+      'Two-coat application by squeegee or spray',
+      'Lot ready to re-stripe within a day or two',
+    ],
+    process: [
+      { title: 'Inspect & quote', detail: 'We walk the lot, check for cracks or potholes that need attention first, and quote by square footage.' },
+      { title: 'Clean & prep', detail: 'Lot swept and blown free of debris, oil spots primed so the sealer bonds instead of lifting.' },
+      { title: 'Apply sealcoat', detail: 'Premium sealer applied in two coats, edges cut in clean around curbs, islands, and drains.' },
+      { title: 'Cure & re-open', detail: 'Cones stay up while it cures — typically drivable within 24 hours, ready to re-stripe shortly after.' },
+    ],
+    faqs: [
+      { q: 'Does sealcoating fix cracks or potholes?', a: 'No — sealcoat is a protective finish, not a repair. We fill cracks and patch potholes first, then sealcoat over a sound surface.' },
+      { q: 'How long does sealcoat last?', a: 'Most lots hold up 2–3 years before needing a fresh coat, depending on traffic volume and winter salt exposure.' },
+      { q: 'What weather do you need to sealcoat?', a: 'Surface and air temps above 50°F with no rain in the forecast for at least 24 hours. We\'ll schedule around the window.' },
+      { q: 'Do I need to re-stripe after sealcoating?', a: 'Yes — sealcoat covers your existing lines. We can bundle re-striping in right after the sealer cures so the lot is fully finished.' },
+    ],
+    metaTitle: 'Asphalt Seal Coating in Central Michigan | Schwab & Co. Holdings',
+    metaDescription: 'Professional parking lot and driveway sealcoating in central Michigan. Two-coat application, oil-stain priming, freeze-thaw protection. Free estimates.',
+  },
+  {
+    slug: 'crack-filling',
+    title: 'Crack Filling',
+    short: 'Hot-pour rubberized crack sealant that keeps water out of your sub-base before small cracks turn into potholes.',
+    tagline: 'Stop the crack before it becomes the pothole.',
+    description:
+      'Every pothole starts as a crack that let water into the base. We clean out cracks with compressed air, then fill them with hot-pour rubberized sealant that stays flexible through Michigan\'s freeze-thaw swings instead of drying out and popping loose like cheap cold-pour fillers. Cracks under about a half-inch get a straight pour; wider or alligatored cracks get routed first for a clean bond. It\'s the cheapest square foot of pavement maintenance you\'ll ever buy — and usually the first step before sealcoating.',
+    icon: 'crack',
+    hero: 'https://images.pexels.com/photos/3027628/pexels-photo-3027628.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    gallery: [
+      'https://images.pexels.com/photos/9462277/pexels-photo-9462277.jpeg?auto=compress&cs=tinysrgb&w=900',
+      'https://images.pexels.com/photos/823696/pexels-photo-823696.jpeg?auto=compress&cs=tinysrgb&w=900',
+    ],
+    bullets: [
+      'Hot-pour rubberized sealant — stays flexible, won\'t pop loose',
+      'Routing for wider or alligatored cracks so the sealant bonds',
+      'Stops water intrusion before it undermines the sub-base',
+      'The cheapest way to delay a full sealcoat or overlay',
+    ],
+    process: [
+      { title: 'Inspect & mark', detail: 'We walk the lot, mark every crack worth sealing, and quote by linear foot.' },
+      { title: 'Clean & rout', detail: 'Cracks blown clean of debris; wider or alligatored cracks routed first for a clean bonding edge.' },
+      { title: 'Hot-pour fill', detail: 'Rubberized sealant melted and applied hot, flush with the surface so it doesn\'t catch a plow blade.' },
+      { title: 'Squeegee & cure', detail: 'Sealant squeegeed level and dusted so it doesn\'t track, then left to set before traffic returns.' },
+    ],
+    faqs: [
+      { q: 'Hot-pour vs. cold-pour crack filler?', a: 'Cold-pour is a DIY-store fix that hardens and pops loose in a season. Hot-pour rubberized sealant stays flexible through freeze-thaw cycles and lasts years longer.' },
+      { q: 'When should cracks be filled?', a: 'As soon as they appear, and always before sealcoating — sealing over open cracks just traps water underneath the new coat.' },
+      { q: 'Is there a crack that\'s too big to fill?', a: 'Wide, alligatored, or crumbling sections usually mean the base has failed underneath — that\'s a patch or repair job, not a crack fill. We\'ll flag it if that\'s the case.' },
+    ],
+    metaTitle: 'Asphalt Crack Filling in Central Michigan | Schwab & Co. Holdings',
+    metaDescription: 'Hot-pour rubberized crack sealing for parking lots and driveways in central Michigan. Routing for wider cracks, freeze-thaw flexible. Free estimates.',
+  },
+  {
     slug: 'line-striping',
     title: 'Line Striping',
     short: 'Crisp, MUTCD-compliant parking lot striping — stalls, arrows, stop bars, and crosswalks that hold up to Michigan traffic and weather.',

@@ -1,6 +1,6 @@
 export const site = {
-  name: 'Schwab & Co. Holdings',
-  dba: 'Schwab & Co. Holdings LLC',
+  name: 'Schwab & Co. Holdings LLC',
+  dba: 'Pavement Preservation',
   tagline: 'Central Michigan parking lot maintenance — crisp lines, fixed potholes, code-compliant lots.',
   phone: '(989) 444-9795',
   phoneHref: 'tel:+19894449795',
@@ -19,7 +19,7 @@ export const site = {
 };
 
 export const stats = [
-  { value: 'Free', label: 'Estimates in 48 hrs' },
+  { value: 'Free', label: 'Estimates in 72 hrs' },
   { value: '7 days', label: 'Avg. turnaround' },
   { value: 'MUTCD', label: 'Compliant layouts' },
   { value: 'Insured', label: 'Licensed & bonded' },
