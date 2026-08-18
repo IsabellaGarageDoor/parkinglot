@@ -22,8 +22,8 @@ export const locations: Location[] = [
     img: '/photos/mt-pleasant-michigan.avif',
     distanceFromRosebush: '15 min from Rosebush',
     nearbyLandmarks: ['Downtown Mt. Pleasant', 'Central Michigan University', 'Soaring Eagle Casino'],
-    metaTitle: 'Parking Lot Striping in Mt. Pleasant, MI | Schwab & Co. Holdings',
-    metaDescription: 'Parking lot striping, pothole repair, signs, and ADA compliance in Mt. Pleasant, MI. Crews dispatched from Rosebush. Free estimates within 48 hours.',
+    metaTitle: 'Parking Lot Striping in Mt. Pleasant, MI | Pavement Preservation',
+    metaDescription: 'Seal coating, parking lot striping, pothole repair, signs, and ADA compliance in Mt. Pleasant, MI. Crews dispatched from Rosebush. Free estimates within 48 hours.',
   },
   {
     slug: 'clare-mi',
@@ -35,8 +35,8 @@ export const locations: Location[] = [
     img: '/photos/clare-michigan.avif',
     distanceFromRosebush: '20 min from Rosebush',
     nearbyLandmarks: ['US-127 corridor', 'Downtown Clare', 'Clare County lakes region'],
-    metaTitle: 'Parking Lot Striping in Clare, MI | Schwab & Co. Holdings',
-    metaDescription: 'Parking lot striping, pothole repair, signs, and ADA compliance in Clare, MI. Serving the US-127 corridor and lakes-area communities. Free estimates.',
+    metaTitle: 'Parking Lot Striping in Clare, MI | Pavement Preservation',
+    metaDescription: 'Seal coating, parking lot striping, pothole repair, signs, and ADA compliance in Clare, MI. Serving the US-127 corridor and lakes-area communities. Free estimates.',
   },
   {
     slug: 'alma-mi',
@@ -48,8 +48,8 @@ export const locations: Location[] = [
     img: '/photos/alma-michigan.avif',
     distanceFromRosebush: '25 min from Rosebush',
     nearbyLandmarks: ['Alma College', 'Downtown Alma', 'Gratiot industrial corridor'],
-    metaTitle: 'Parking Lot Striping in Alma, MI | Schwab & Co. Holdings',
-    metaDescription: 'Parking lot striping, pothole repair, wheel stops, and ADA compliance in Alma, MI. Serving Alma College, downtown, and Gratiot County. Free estimates.',
+    metaTitle: 'Parking Lot Striping in Alma, MI | Pavement Preservation',
+    metaDescription: 'Seal coating, parking lot striping, pothole repair, wheel stops, and ADA compliance in Alma, MI. Serving Alma College, downtown, and Gratiot County. Free estimates.',
   },
   {
     slug: 'midland-mi',
@@ -61,8 +61,8 @@ export const locations: Location[] = [
     img: '/photos/midland-michigan.avif',
     distanceFromRosebush: '40 min from Rosebush',
     nearbyLandmarks: ['Downtown Midland', 'Dow corporate campus', 'MidMichigan Medical Center'],
-    metaTitle: 'Parking Lot Striping in Midland, MI | Schwab & Co. Holdings',
-    metaDescription: 'Parking lot striping, pothole repair, signs, ADA compliance, and maintenance contracts in Midland, MI. Serving Dow, MidMichigan, and retail. Free estimates.',
+    metaTitle: 'Parking Lot Striping in Midland, MI | Pavement Preservation',
+    metaDescription: 'Seal coating, parking lot striping, pothole repair, signs, ADA compliance, and maintenance contracts in Midland, MI. Serving Dow, MidMichigan, and retail. Free estimates.',
   },
   {
     slug: 'houghton-lake-mi',
@@ -74,8 +74,8 @@ export const locations: Location[] = [
     img: 'https://images.pexels.com/photos/9462277/pexels-photo-9462277.jpeg?auto=compress&cs=tinysrgb&w=900',
     distanceFromRosebush: '35 min from Rosebush',
     nearbyLandmarks: ['Houghton Lake', 'Prudenville', 'Higgins Lake'],
-    metaTitle: 'Parking Lot Striping in Houghton Lake, MI | Schwab & Co. Holdings',
-    metaDescription: 'Parking lot striping, pothole repair, and signage in Houghton Lake, Prudenville, and Higgins Lake, MI. Seasonal scheduling for tourist-area lots. Free estimates.',
+    metaTitle: 'Parking Lot Striping in Houghton Lake, MI | Pavement Preservation',
+    metaDescription: 'Seal coating, parking lot striping, pothole repair, and signage in Houghton Lake, Prudenville, and Higgins Lake, MI. Seasonal scheduling for tourist-area lots. Free estimates.',
   },
   {
     slug: 'rosebush-mi',
@@ -87,8 +87,8 @@ export const locations: Location[] = [
     img: 'https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=900',
     distanceFromRosebush: 'Home base',
     nearbyLandmarks: ['Isabella County', 'US-27 business corridor', 'Chippewa River area'],
-    metaTitle: 'Parking Lot Striping in Rosebush, MI | Schwab & Co. Holdings',
-    metaDescription: 'Rosebush, MI home base for Schwab & Co. Holdings. Parking lot striping, pothole repair, wheel stops, signs, ADA compliance, and small concrete work. Free estimates.',
+    metaTitle: 'Parking Lot Striping in Rosebush, MI | Pavement Preservation',
+    metaDescription: 'Rosebush, MI home base for Pavement Preservation. Seal coating, parking lot striping, pothole repair, wheel stops, signs, ADA compliance, and small concrete work. Free estimates.',
   },
   {
     slug: 'shepherd-mi',
@@ -100,8 +100,8 @@ export const locations: Location[] = [
     img: 'https://images.pexels.com/photos/5821848/pexels-photo-5821848.jpeg?auto=compress&cs=tinysrgb&w=900',
     distanceFromRosebush: '20 min from Rosebush',
     nearbyLandmarks: ['Village of Shepherd', 'Isabella County', 'South of Mt. Pleasant'],
-    metaTitle: 'Parking Lot Striping in Shepherd, MI | Schwab & Co. Holdings',
-    metaDescription: 'Parking lot striping, pothole repair, and signage in Shepherd, MI. Serving small commercial lots, churches, and community buildings. Free estimates.',
+    metaTitle: 'Parking Lot Striping in Shepherd, MI | Pavement Preservation',
+    metaDescription: 'Seal coating, parking lot striping, pothole repair, and signage in Shepherd, MI. Serving small commercial lots, churches, and community buildings. Free estimates.',
   },
   {
     slug: 'st-louis-mi',
@@ -113,8 +113,8 @@ export const locations: Location[] = [
     img: 'https://images.pexels.com/photos/417072/pexels-photo-417072.jpeg?auto=compress&cs=tinysrgb&w=900',
     distanceFromRosebush: '30 min from Rosebush',
     nearbyLandmarks: ['Downtown St. Louis', 'Gratiot County', 'Between Alma & Mt. Pleasant'],
-    metaTitle: 'Parking Lot Striping in St. Louis, MI | Schwab & Co. Holdings',
-    metaDescription: 'Parking lot striping, pothole repair, and ADA compliance in St. Louis, MI. Serving commercial and industrial lots across Gratiot County. Free estimates.',
+    metaTitle: 'Parking Lot Striping in St. Louis, MI | Pavement Preservation',
+    metaDescription: 'Seal coating, parking lot striping, pothole repair, and ADA compliance in St. Louis, MI. Serving commercial and industrial lots across Gratiot County. Free estimates.',
   },
 ];
 
