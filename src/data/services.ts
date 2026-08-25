@@ -249,8 +249,8 @@ export const services: Service[] = [
   },
   {
     slug: 'concrete-repair',
-    title: 'Small Concrete Repair',
-    short: 'Curbs, sidewalks, aprons, and catch basin repairs — small concrete work that protects your pavement and your liability.',
+    title: 'Concrete Repair',
+    short: 'Curbs, sidewalks, aprons, and catch basin repairs — concrete repair work that protects your pavement and your liability.',
     tagline: 'The concrete details that hold the lot together.',
     description:
       'Broken curb, heaved sidewalk, spalled catch basin — these are the small concrete failures that turn into big ones if you ignore them. We handle small concrete repairs: curb replacement, sidewalk squares, apron patches, catch basin frame-and-grate resets, and ADA curb cut installations. Anything bigger than a few squares, we refer a trusted partner.',
@@ -316,7 +316,39 @@ export const services: Service[] = [
     ],
     metaTitle: 'Speed Bump Installation in Central Michigan | Pavement Preservation',
     metaDescription: 'Speed bumps and humps installed and anchored in Central Michigan. Asphalt, rubber, or concrete options. Reflective striping and warning signs. Free estimates.',
-  },
+  },{
+  slug: 'residential-driveway-repair',
+  title: 'Residential Driveway Maintenance',
+  short: 'Seal coating, pothole patching, and driveway crack sealing, for homeowners — protect your driveway before a small problem becomes a full replacement.',
+  tagline: 'A little maintenance now beats a new driveway later.',
+  description:
+    'Your driveway takes the same freeze-thaw beating as any commercial lot — just on a smaller scale, and usually with no maintenance budget behind it. We bring the same sealcoating, hot-pour crack sealing, and pothole repair we use on commercial properties to homeowners around Central Michigan, sized right for a driveway and priced for a driveway. Catching a crack or a soft spot early is a fraction of the cost of a full tear-out and repave.',
+  icon: 'driveway',
+  hero: 'https://images.pexels.com/photos/9462277/pexels-photo-9462277.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  gallery: [
+    'https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=900',
+    'https://images.pexels.com/photos/5821848/pexels-photo-5821848.jpeg?auto=compress&cs=tinysrgb&w=900',
+  ],
+  bullets: [
+    'Residential seal coating to protect and refresh the surface',
+    'Hot-pour crack sealing before winter water intrusion does real damage',
+    'Aquaphalt pothole and soft-spot repair — drivable almost immediately',
+    'Sized and priced for driveways, not commercial lots',
+  ],
+  process: [
+    { title: 'Free walk & quote', detail: 'We look at your driveway, flag what actually needs attention, and quote it up front — no pressure to bundle services you don\'t need.' },
+    { title: 'Repair first', detail: 'Potholes and cracks get fixed before anything else — sealing over damage just traps water underneath.' },
+    { title: 'Seal (if needed)', detail: 'Once the surface is sound, we apply sealcoat to protect against salt, oil, and UV damage.' },
+    { title: 'Walk-through', detail: 'We show you the finished work before we leave and let you know when it\'s safe to park or drive on.' },
+  ],
+  faqs: [
+    { q: 'Do you work on residential driveways, or just commercial lots?', a: 'Both. Our main focus is commercial parking lots, but we take on driveway pothole repair, crack sealing, and seal coating for homeowners around central Michigan too.' },
+    { q: 'My driveway has a few cracks — is it worth fixing, or should I just wait?', a: 'Worth fixing now. Cracks let water into the base, and Michigan\'s freeze-thaw cycle turns a small crack into a pothole or a heaved section over a single winter. Sealing them is cheap; replacing the driveway isn\'t.' },
+    { q: 'How much does driveway repair cost compared to a full replacement?', a: 'Pothole and crack repair typically runs a small fraction of a repave. We\'ll always tell you honestly if your driveway is past the point where patching makes sense.' },
+  ],
+  metaTitle: 'Residential Driveway Repair in Central Michigan | Pavement Preservation',
+  metaDescription: 'Driveway pothole repair, crack sealing, and seal coating for homeowners in Central Michigan. Aquaphalt repair, free quotes, priced for driveways.',
+},
 ];
 
 export const getService = (slug: string) => services.find((s) => s.slug === slug);
